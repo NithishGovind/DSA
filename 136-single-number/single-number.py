@@ -4,13 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        d = {}
+        # d = {}
+        # for i in nums:
+        #     if i not in d:
+        #         d[i] = 0
+        #     d[i]+=1
+        # for j,k in d.items():
+        #     if k==1:
+        #         return j
+        xor=0
         for i in nums:
-            if i not in d:
-                d[i] = 0
-            d[i]+=1
-        for j,k in d.items():
-            if k==1:
-                return j
-
+            xor^=i
+        return xor
            
